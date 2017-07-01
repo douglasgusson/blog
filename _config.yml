@@ -26,6 +26,7 @@ github_username:  douglasgusson
 # Build settings
 markdown: kramdown
 theme: minima
+lang: pt-br
 disqus:
     shortname: douglasgusson-github-io
 permalink: /:title
