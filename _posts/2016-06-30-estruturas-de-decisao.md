@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Estruturas de decisão"
 date:   2016-06-30 12:30:41 -0300
 author: "Douglas Gusson"

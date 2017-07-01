@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Como desenvolver um placar digital"
 date:   2016-11-11 12:30:41 -0300
 author: "Douglas Gusson"

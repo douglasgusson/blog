@@ -26,6 +26,8 @@ github_username:  douglasgusson
 # Build settings
 markdown: kramdown
 theme: minima
+disqus:
+    shortname: douglasgusson-github-io
 permalink: /:title
 gems:
   - jekyll-feed
