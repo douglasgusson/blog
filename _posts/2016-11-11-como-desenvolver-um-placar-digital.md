@@ -5,6 +5,7 @@ title:  "Como desenvolver um placar digital"
 date:   2016-11-11 12:30:41 -0300
 author: "Douglas Gusson"
 categories: javascript programação
+introduction: Nesse post trago um pequeno tutorial, demonstrando o desenvolvimento de um placar digital, usando Javascript, HTML e CSS.
 ---
 Nesse post trago um pequeno tutorial, demonstrando o desenvolvimento de um placar digital,
 usando Javascript, HTML e CSS. Essa é a interface do placar:
