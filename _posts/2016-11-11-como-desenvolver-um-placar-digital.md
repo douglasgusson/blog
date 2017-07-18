@@ -235,7 +235,7 @@ A classe `section-full` diz pra nossa `div` que ela deve ocupar no mínimo toda 
 na `btn-lg` que é, na verdade, uma classe existente no Bootstrap, estamos adicionando uma
 margem no topo dos botão, para não ficarem “colados” na imagem do número.
 
-Veja o placar em ação [aqui]({{ site.url }}/assets/demo/placar/).
+Veja o placar em ação [aqui](https://douglasgusson.github.io/placar-js/).
 
 [Código fonte do projeto](https://github.com/douglasgusson/placar-js) (Github)
 

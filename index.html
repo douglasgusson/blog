@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<h1>Postagens</h1>
+<!-- Posts -->
+<ul id="posts">
+
+	{% for post in site.posts %}
+
+	  <li class="post">
+	  	<h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+	  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
+	  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+	  </li>
+
+    {% endfor %}
+
+</ul>

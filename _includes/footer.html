@@ -1,20 +1,28 @@
-<footer class="site-footer">
+<footer>
+    {% if site.github_username %}
+        <p><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> {{ site.github_username }}</a></p>
+    {% endif %}
 
-  <div class="wrapper">
+    <button class="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-            {% if site.github_username %}
-            <li>
-              {% include icon-github.html username=site.github_username %}
-            </li>
-            {% endif %}
-        </ul>
-        <p class="rss-subscribe">Inscreva-se <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-      </div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-  </div>
+    <script type="text/javascript">
 
+          $(document).ready(function(){
+                $(window).scroll(function(){
+                    if ($(this).scrollTop() > 100) {
+                        $('.back-top').fadeIn();
+                    } else {
+                        $('.back-top').fadeOut();
+                    }
+                });
+
+                $('.back-top').click(function(){
+                    $('html, body').animate({scrollTop : 0},1000);
+                    return false;
+                });
+          });
+
+    </script>
 </footer>

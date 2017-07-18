@@ -1,3 +1,7 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
 @charset "utf-8";
 
 // Define defaults for each variable.
@@ -10,8 +14,9 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
+$main-color: #008A3C !default;
+$text-color: #222 !default;
+$background-color: #FDFDFD !default;
 $brand-color:      #2a7ae2 !default;
 
 $grey-color:       #828282 !default;
@@ -41,9 +46,4 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
-// Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
-;
+@import "base", "typography", "layout", "syntax";
