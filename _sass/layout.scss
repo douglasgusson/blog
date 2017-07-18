@@ -32,3 +32,15 @@
     background-color: lighten($text-color, 70%);
   }
 }
+
+.footer {
+  margin-top: 2em;
+  &:before {
+    display: block;
+    content: '';
+    width: 5rem;
+    height: 1px;
+    margin: 23px auto;
+    background-color: lighten($text-color, 70%);
+  }
+}
