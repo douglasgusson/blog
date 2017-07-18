@@ -3,7 +3,11 @@
         <p><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> {{ site.github_username }}</a></p>
     {% endif %}
 
-    <p>Inscreva-se <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p>
+        Inscreva-se 
+        <a href="{{ "/feed.xml" | absolute_url }}"><i class="fa fa-rss-square" aria-hidden="true"></i>
+ via RSS</a>
+    </p>
 
     <button class="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
