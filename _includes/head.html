@@ -13,11 +13,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
   
-  <link rel=icon href="{{ "/assets/img/icon.png" | relative_url }}" sizes="any">
+  <link rel=icon href="{{ '/assets/img/icon.png' | relative_url }}" sizes="any">
 
-  {% if jekyll.environment == 'production' %}
-  {% include google-analytics.html %}
-  {% endif %}
 </head>
