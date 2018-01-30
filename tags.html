@@ -1,0 +1,60 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-6 title-post">{{ page.title }}</h1>
+	<div class="text-secondary">
+		Procure os assuntos pelas tags.
+	</div>
+  </div>
+</div>
+
+<div class="container">
+
+		<div class="tag-list">
+		{% assign tags_list = site.tags %}
+		  {% if tags_list.first[0] == null %}
+		    {% for tag in tags_list %}
+		        <a href="#{{ tag | slugify }}" class="btn btn-outline-dark btn-tag">{{ tag }}</a>
+		    {% endfor %}
+		  {% else %}
+		    {% for tag in tags_list %}
+		        <a href="#{{ tag[0] | slugify }}" class="btn btn-outline-dark btn-tag">{{ tag[0] }}</a>
+		    {% endfor %}
+		  {% endif %}
+		{% assign tags_list = nil %}
+		</div>
+
+		{% for tag in site.tags  %}	
+			<span class="h2" id="{{ tag[0] | slugify }}">
+		    	{{ tag[0] }}
+		    </span>
+		    <div class="col-md-12">
+		        {% assign pages_list = tag[1] %}
+		        {% for post in pages_list reversed %}
+		            {% if post.title != null %}
+		            {% if group == null or group == post.group %}
+
+		            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+		            &nbsp;&bull;&nbsp;
+		            <time datetime="{{ post.date | date_to_xmlschema }}" class="text-secondary">
+	                    {% include date.html date=post.date %}
+	                </time>
+	         
+
+	            	<hr />
+
+		            {% endif %}
+		            {% endif %}
+		        {% endfor %}
+		        {% assign pages_list = nil %}
+		        {% assign group = nil %}
+
+	    	</div>
+		{% endfor %}  
+
+</div>

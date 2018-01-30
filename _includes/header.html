@@ -1,6 +1,25 @@
-<header class="header">
-	<a href="{{ "/" | relative_url }}">
-		<img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="Pitanga Cyber Logo">
-	  <span>&lt;pitangadev&#47;&gt;</span>
-	</a>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+	 	<a class="navbar-brand" href="{{ site.url }}">
+			<img class="img-brand" src="{{ "/assets/img/pitanga.svg" | relative_url }}" alt="Logo pitanga">
+		</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	     	<li class="nav-item">
+	     		<a class="nav-link text-light" href="{{ site.url }}">Home</a>
+	      	</li>
+	      	<li class="nav-item">
+	     		<a class="nav-link text-light" href="{{ site.url }}/tags/">Tags</a>
+	      	</li>
+	      	<li class="nav-item">
+	      		<a class="nav-link text-light" href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a>
+	      	</li>
+	 	</ul>
+	  </div>
+	  </div>
+	</nav>
 </header>

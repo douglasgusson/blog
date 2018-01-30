@@ -1,1 +1,0 @@
-# douglasgusson.github.io

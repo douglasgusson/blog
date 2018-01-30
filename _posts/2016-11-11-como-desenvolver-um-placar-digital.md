@@ -1,22 +1,19 @@
 ---
 layout: post
-comments: true
-title:  "Como desenvolver um placar digital"
-date:   2016-11-11 12:30:41 -0300
-author: "Douglas Gusson"
-categories: javascript programação
-introduction: Nesse post trago um pequeno tutorial, demonstrando o desenvolvimento de um placar digital, usando Javascript, HTML e CSS.
+title:  Como desenvolver um placar digital
+author: Douglas Gusson
+tags: [Programação, JavaScript]
 ---
 Nesse post trago um pequeno tutorial, demonstrando o desenvolvimento de um placar digital,
 usando Javascript, HTML e CSS. Essa é a interface do placar:
 
-![interface placar digital]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/tela-placar.png)
+![interface placar digital]({{ site.url }}/assets/img/posts/005.png)
 
 Vamos acrescentar o [Bootstrap](http://getbootstrap.com) ao nosso projeto, apenas para aproveitar algumas facilidades
 que ele oferece, principalmente no quesito responsividade. Para isso
 acesse [getbootstrap.com/getting-started/](http://getbootstrap.com/getting-started/) e faça o download dos arquivos.
 
-![Download Bootstrap]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/download-bootstrap.png)
+![Download Bootstrap]({{ site.url }}/assets/img/posts/006.png)
 
 Fazendo a extração dos arquivos baixados, temos uma estrutura com três pastas `css`, `fonts` e `js`.
 
@@ -24,7 +21,7 @@ Crie uma pasta para o projeto e copie essas pastas para ela. Com isso feito, pod
 
 Primeiro vamos criar um arquivo chamado index.html no diretório raiz do nosso projeto, com a seguinte estrutura:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -97,7 +94,7 @@ Primeiro vamos criar um arquivo chamado index.html no diretório raiz do nosso p
         <script src="./js/placar.js"></script>
     </body>
 </html>
-{% endhighlight %}
+```
 
 Mesmo com essa estrutura, ainda faltam as imagens que formarão os números na tela, como o foco do tutorial não é na criação de imagens, aqui estão os links para download das imagens: [[0]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/0.png), [1]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/1.png), [2]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/2.png), [3]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/3.png), [4]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/4.png), [5]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/5.png), [6]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/6.png), [7]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/7.png), [8]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/8.png), [9]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/9.png), [none]({{ site.url }}/assets/img/como-desenvolver-um-placar-digital/none.png)].
 
@@ -105,7 +102,7 @@ Crie uma pasta `img` no diretório raiz do projeto e salve as imagens nela.
 
 Bom, agora podemos começar a brincar com o Javascript, pra isso vamos criar um arquivo dentro da pasta `js` chamado `placar.js`, e nele declarar as seguintes variáveis:
 
-{% highlight Javascript %}
+```javascript
 var t1=0, t2=0, srcImg1T1, srcImg2T1, srcImg1T2, srcImg2T2;
 
 var $botaoMaisTime1 = document.querySelector('#btn-mais-time1');
@@ -119,7 +116,7 @@ var $img2Time1 = document.querySelector('#img2-time1');
 
 var $img1Time2 = document.querySelector('#img1-time2');
 var $img2Time2 = document.querySelector('#img2-time2');
-{% endhighlight %}
+```
 
 **Mas pra que cada variável dessa serve?**
 
@@ -144,12 +141,12 @@ com isso temos uma diferenciação das outras variáveis.*
 Tendo essas variáveis declaradas, podemos determinar a ação dos nossos botões. O código da
 ação do botão de incremento de pontuação do time 1 (`$botaoMaisTime1`) fica assim:
 
-{% highlight javascript %}
+```javascript
 $botaoMaisTime1.addEventListener('click',function() {
     (t1 < 100) ? t1++ : t1;
     setPontuacaoTime1(t1);
 });
-{% endhighlight %}
+```
 
 
 Na primeira linha adicionamos um “ouvinte” de eventos ao botão, no qual aguarda por um
@@ -161,16 +158,16 @@ vamos escrever mais adiante.
 Na sequência definimos a ação do botão de incremento do time 2, que segue exatamente a
 mesma estrutura:
 
-{% highlight javascript %}
+```javascript
 $botaoMaisTime2.addEventListener('click',function() {
     (t2 < 100) ? t2++ : t2;
     setPontuacaoTime2(t2);
 });
-{% endhighlight %}
+```
 
 Agora vamos programar a ação de decremento para os times 1 e 2:
 
-{% highlight javascript %}
+```javascript
 $botaoMenosTime1.addEventListener('click',function() {
     (t1 > -1) ? t1-- : t1;
     setPontuacaoTime1(t1);
@@ -179,12 +176,12 @@ $botaoMenosTime2.addEventListener('click',function() {
     (t2 > -1) ? t2-- : t2;
     setPontuacaoTime2(t2);
 });
-{% endhighlight %}
+```
 
 Bom, agora precisamos criar as funções `setPontuacaoTime1(x)` e `setPontuacaoTime2(x)`. Elas
 devem ficar da seguinte forma:
 
-{% highlight javascript %}
+```javascript
 function setPontuacaoTime1(x) {
     if ((x > 99) || (x < 0)) {
         srcImg1T1='none.png';
@@ -208,7 +205,7 @@ function setPontuacaoTime2(x) {
     $img1Time2.setAttribute('src', './img/' + srcImg1T2);
     $img2Time2.setAttribute('src', './img/' + srcImg2T2);
 }
-{% endhighlight %}
+```
 
 Bom, essas duas funções possuem a mesma estrutura. Primeiro verificamos se o valor do
 argumento recebido está na faixa de 1 a 99, caso contrário atribuímos “none.png” as variáveis
@@ -221,7 +218,7 @@ do algarismo da dezena. Assim, já podemos exibir as imagens corretamente na tel
 Agora vamos apenas fazer um pequeno acerto no CSS para a melhor exibição do nosso placar.
 Crie um arquivo chamado `custom.css` dentro da pasta `css`, com o seguite conteúdo:
 
-{% highlight css %}
+```css
 .section-full {
     min-height: 100vh;
 }
@@ -229,7 +226,7 @@ Crie um arquivo chamado `custom.css` dentro da pasta `css`, com o seguite conte�
 .btn-lg {
     margin-top: 10px;
 }
-{% endhighlight %}
+```
 
 A classe `section-full` diz pra nossa `div` que ela deve ocupar no mínimo toda a altura da tela. E
 na `btn-lg` que é, na verdade, uma classe existente no Bootstrap, estamos adicionando uma

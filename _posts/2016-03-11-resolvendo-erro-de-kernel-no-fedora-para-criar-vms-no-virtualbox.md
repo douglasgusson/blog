@@ -1,18 +1,13 @@
 ---
 layout: post
-title: "Resolvendo erro de kernel no Fedora para criar VMs no VirtualBox"
-comments: true
-date: 2016-03-11 12:34:29
-image: '/assets/img/'
-description:
+title: Resolvendo erro de kernel no Fedora para criar VMs no VirtualBox
 author: Douglas Gusson
-categories:
-introduction: Veja nesse post como resolver o erro de kernel que ocorre ao tentar criar uma máquina virtual no VirtualBox usando o Fedora.
+tags: [Fedora, VirtualBox]
 ---
 
 Veja nesse post como resolver o erro de kernel que ocorre ao tentar criar uma máquina virtual no VirtualBox usando o Fedora.
 
-![Erro VirtualBox]({{ site.url }}/assets/img/resolvendo-erro-de-kernel-no-fedora-para-criar-vms-no-virtualbox/virtualbox-error.png)
+![Erro VirtualBox]({{ site.url }}/assets/img/posts/004.png)
 
 Para começar, instale o gcc (GNU Compiler Collection), usando o comando abaixo:
 

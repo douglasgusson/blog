@@ -1,36 +1,5 @@
-<footer class="footer">
-    {% if site.github_username %}
-        <p><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> {{ site.github_username }}</a></p>
-    {% endif %}
-
-    <p>
-        Inscreva-se 
-        <a href="{{ "/feed.xml" | absolute_url }}"><i class="fa fa-rss-square" aria-hidden="true"></i>
- via RSS</a>
-    </p>
-
-    <button class="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="{{ "/assets/js/materialize.min.js" | relative_url }}"></script>
-
-    <script type="text/javascript">
-
-          $(document).ready(function(){
-                $(window).scroll(function(){
-                    if ($(this).scrollTop() > 100) {
-                        $('.back-top').fadeIn();
-                    } else {
-                        $('.back-top').fadeOut();
-                    }
-                });
-
-                $('.back-top').click(function(){
-                    $('html, body').animate({scrollTop : 0},1000);
-                    return false;
-                });
-          });
-
-    </script>
+<footer class="bg-dark text-light text-center">
+    <div class="card-footer">
+    	
+    </div>
 </footer>

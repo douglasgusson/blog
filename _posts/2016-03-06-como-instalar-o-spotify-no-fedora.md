@@ -1,18 +1,13 @@
 ---
 layout: post
-title: "Como instalar o Spotify no Fedora"
-comments: true
-date: 2016-03-06 12:03:06
-image: '/assets/img/'
-description:
+title: Como instalar o Spotify no Fedora
 author: Douglas Gusson
-categories:
-introduction: Veja nesse post, um pequeno passo a passo de como instalar o *client* do Spotify no Fedora.
+tags: [Spotify, Fedora]
 ---
 
 Veja nesse post, um pequeno passo a passo de como instalar o *client* do Spotify no Fedora.
 
-![Logo Spotify]({{ site.url }}/assets/img/como-instalar-o-spotify-no-fedora/spotify_logo.png)
+![Logo Spotify]({{ site.url }}/assets/img/posts/003.png)
 
 **Instalação:**
 
