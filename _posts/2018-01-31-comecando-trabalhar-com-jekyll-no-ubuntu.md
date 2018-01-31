@@ -17,7 +17,7 @@ $ sudo apt-get install ruby ruby-dev make gcc
 
 Repare que estamos instalando o `make` e o `gcc` também, isso porque algumas bibliotecas e/ou pacotes precisam ser compiladas durante a instalação.
 
-Após a conclusão desse comando podemos verificar a versão do Ruby instalada, execuntando:
+Após a conclusão desse comando podemos verificar a versão do Ruby instalada, executando:
 
 ```
 $ ruby -v
@@ -29,7 +29,7 @@ Agora podemos instalar o Jekyll em si, e junto com ele instalaremos também o `b
 $ sudo gem install jekyll bundler
 ```
 
-Finalmente, agora podemos criar nosso projeto, seguindo os passos do próprio site do [Jekyll](https://jekyllrb.com)
+Finalmente, agora podemos criar nosso projeto, seguindo os passos do próprio site do [Jekyll](https://jekyllrb.com).
 
 ![Print quick start instrutions]({{ site.url }}/assets/img/posts/011.png)
 
@@ -39,7 +39,7 @@ $ cd my-awesome-site
 $ bundle exec jekyll serve
 ```
 
-Depois de rodar o `jekyll serve`, seu projeto estará rodando no [http://localhost:4000/](http://localhost:4000/)
+Depois de rodar o `jekyll serve`, seu projeto estará rodando no [http://localhost:4000/](http://localhost:4000/).
 
 Bom, espero que esse post tenha te ajudado, pelo menos um pouco no início dessa caminhada com o Jekyll.
 
