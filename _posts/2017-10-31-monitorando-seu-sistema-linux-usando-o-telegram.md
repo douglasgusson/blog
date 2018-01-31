@@ -16,18 +16,18 @@ Mãos na massa!
 Primeiro precisamos instalar a ferramenta que verifica a temperatura da nossa máquina, nesse exemplo usaremos a `lm_sensors`.
 
 Para instalar no Fedora, usamos o seguinte comando:
-```shell
+```
 $ sudo dnf install lm_sensors
 ```
 
 No Debian:
-```shell
+```
 $ sudo apt-get install lm-sensors
 ```
 
 Precisamos instalar também a ferramenta que envia mensagens através das APIs do Telegram. Nada te impede implementar algo parecido, nesse caso usamos o `telegram-send` por questões de praticidade. Essa ferramenta foi desenvolvida em python, portanto para instalar usamos o `pip` da seguinte forma:
 
-```shell
+```
 $ sudo pip install telegram-send
 ```
 
@@ -51,19 +51,19 @@ Em seguida, será solicitado o nome de usuário do nosso bot ("Good. Now let's c
 
 Para configurar o `telegram-send`, executamos o seguinte comando:
 
-```shell
+```
 $ telegram-send -c
 ```
 
 ou 
 
-```shell
+```
 $ telegram-send --configure
 ```
 
 Será solicitado o token, conforme abaixo:
 
-```shell
+```
 Talk with the BotFather on Telegram (https://telegram.me/BotFather), create a bot and insert the token
 ❯ 
 ```
@@ -77,14 +77,14 @@ and send it the password: XXXXX
 
 Executando esse passo corretamente, recebemos uma mensagem parecida com essa:
 
-```shell
+```
 🎊 Congratulations <USERNAME>! 🎊
 telegram-send is now ready for use!
 ```
 
 Agora podemos testar o envio de mensagens rodando o seguinte comando:
 
-```shell
+```
 $ telegram-send "olá"
 ```
 
@@ -92,7 +92,7 @@ Se fizemos tudo certinho até aqui o bot lhe enviará uma mensagem de olá.
 
 Bom, nesse ponto estamos bem perto de alcançar nosso objetivo que é enviar uma mensagem contendo dados de temperatura da máquina. Para isso, precisamos pegar a saída do comando `sensors` da ferramenta `lm_sensors` e transformar em uma mensagem, é possível fazer isso usando o `pipe`. Um exemplo de uso seria da seguinte forma:
 
-```shell
+```
 $ sensors | telegram-send --pre --stdin
 ```
 

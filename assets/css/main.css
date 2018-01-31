@@ -50,6 +50,14 @@ img {
 	width: 2em; 	
 }
 
+pre {
+  padding: .5em;
+}
+
+.highlight {
+  border-radius: 10px;
+}
+
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .c, .highlight .cd {

@@ -15,7 +15,7 @@ Imagine um programa que com base nas notas de um aluno, lançadas pelo professor
 calculasse a média desse aluno, e informasse se o mesmo está aprovado ou não. (considerando
 60.0 como média para aprovação)
 
-{% highlight c %}
+```
 algoritmo "Aprovacao"
 
 var
@@ -41,7 +41,7 @@ senao
 fimse
 
 fimalgoritmo
-{% endhighlight %}
+```
 
 
 Visualizando o código acima, já dá para ter uma noção do que vem a ser estrutura de decisão,
@@ -61,7 +61,7 @@ Veja abaixo um exemplo utilizando o `escolha...caso`:
 Nesse exemplo, será exibida uma curiosidade referente a cor vinculada a opção informada pelo
 usuário.
 
-{% highlight c %}
+```
 algoritmo "Cores"
 
 var
@@ -98,8 +98,7 @@ escolha (op)
 fimescolha
 
 fimalgoritmo
-
-{% endhighlight %}
+```
 
 Utilizando a variável `op` para armazenar a opção que o usuário informar, é possível fazer com
 que o algoritmo decida o que fazer, que nesse caso é exibir uma curiosidade para o usuário.
