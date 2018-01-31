@@ -5,7 +5,7 @@ author: Douglas Gusson
 tags: [Jekyll, Ubuntu]
 ---
 
-Se você assim como eu (à um tempo atrás), prentende se aventurar no mundo do Jekyll, esse post pode te auxiliar no início dessa jornada. Nele você verá como fazer a instalação do Jekyll no sistema operacional Ubuntu.
+Se você prentende se aventurar no mundo do Jekyll, esse post pode te auxiliar no início dessa jornada. Nele você verá como fazer a instalação do Jekyll no sistema operacional Ubuntu.
 
 Vamos lá!
 
