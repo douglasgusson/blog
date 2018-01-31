@@ -17,4 +17,10 @@
   
   <link rel=icon href="{{ '/assets/img/icon.png' | relative_url }}" sizes="any">
 
+  <script src="https://use.fontawesome.com/c4fa25bea2.js"></script>
+
+  {% if jekyll.environment == 'production' %}
+  {% include google-analytics.html %}
+  {% endif %}
+
 </head>

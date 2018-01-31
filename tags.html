@@ -6,7 +6,8 @@ permalink: /tags/
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-6 title-post">{{ page.title }}</h1>
+    <h1 class="display-6 title-post"><i class="fa fa-tags" aria-hidden="true"></i>
+ {{ page.title }}</h1>
 	<div class="text-secondary">
 		Procure os assuntos pelas tags.
 	</div>
@@ -19,11 +20,13 @@ permalink: /tags/
 		{% assign tags_list = site.tags %}
 		  {% if tags_list.first[0] == null %}
 		    {% for tag in tags_list %}
-		        <a href="#{{ tag | slugify }}" class="btn btn-outline-dark btn-tag">{{ tag }}</a>
+		        <a href="#{{ tag | slugify }}" class="btn btn-outline-dark btn-sm btn-tag"><i class="fa fa-tag" aria-hidden="true"></i>
+ {{ tag }}</a>
 		    {% endfor %}
 		  {% else %}
 		    {% for tag in tags_list %}
-		        <a href="#{{ tag[0] | slugify }}" class="btn btn-outline-dark btn-tag">{{ tag[0] }}</a>
+		        <a href="#{{ tag[0] | slugify }}" class="btn btn-outline-dark btn-sm btn-tag"><i class="fa fa-tag" aria-hidden="true"></i>
+ {{ tag[0] }}</a>		        
 		    {% endfor %}
 		  {% endif %}
 		{% assign tags_list = nil %}
