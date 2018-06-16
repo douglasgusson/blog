@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Insert’s das 5565 cidades brasileiras
+title: Insert’s das 5570 cidades brasileiras
 author: Douglas Gusson
 tags: [SQL]
 ---
-SQL para inserção das 5565 cidades brasileiras, numa tabela cidade, contendo cod_cidade (código do IBGE), nome_cidade e sigla_uf:
+SQL para inserção das 5570 cidades brasileiras, numa tabela cidade, contendo cod_cidade (código do IBGE), nome_cidade e sigla_uf:
 
 ![Modelo tabela de cidades]({{ site.url }}/assets/img/posts/002.jpg)
 
