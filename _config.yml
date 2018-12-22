@@ -1,10 +1,10 @@
 # Site settings
-title: Douglas Gusson
+title: gusson.org
 email: douglasgusson@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Um blog de um desenvolvedor entusiasta de novas tecnologias.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://gusson.org" # the base hostname & protocol for your site
+url: "https://gusson.org" # the base hostname & protocol for your site
 
 
 # Build settings
@@ -14,9 +14,14 @@ permalink: /:title/
 lang: "pt-br"
 disqus:
     shortname: douglasgusson-github-io
+
+sass:
+  style: compressed
+
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-seo-tag
 
 
 paginate: 5
