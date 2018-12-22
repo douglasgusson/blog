@@ -1,0 +1,35 @@
+$font-color: #32383E; // cinza escuro
+$hover-color: #666;
+
+.share {
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.share-links {
+
+	.icon {
+		width: 1.6rem;
+		height: 1.6rem;
+		stroke: $font-color;
+		fill: $font-color;
+
+		&:hover {
+			stroke: $hover-color;
+			fill: $hover-color;
+		}
+	}
+
+
+	a {
+		color: $font-color;
+		text-decoration: none;
+		text-decoration-line: none;
+		padding: .6rem;
+
+		span {
+			display: none;
+		}
+	}
+
+}

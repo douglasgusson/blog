@@ -1,0 +1,12 @@
+$cor-coracao: #ff0000;
+
+footer {
+	margin-top: 2em;
+	padding-top: 4em;
+	padding-bottom: 4em;
+
+	.icon-heart {
+		stroke: $cor-coracao;
+  		fill: $cor-coracao;
+	}
+}
