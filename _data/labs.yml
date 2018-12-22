@@ -1,0 +1,14 @@
+- name: Pitnet
+  link: https://pitnet.gusson.org
+  description: Conversor de decimal para binário
+  image: pitnet.png
+
+- name: Bingo
+  link: https://sorteadordebingo.gusson.org
+  description: Sorteador de Bingo
+  image: bingo.png
+
+- name: Placar
+  link: https://placar.gusson.org
+  description: Placar eletrônico
+  image: placar.png
