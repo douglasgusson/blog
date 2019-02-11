@@ -1,17 +1,10 @@
 ---
 layout: post
-comments: true
-title: "Desenvolvimento de um bot para o Telegram em Python, do zero ao deploy - Parte 1"
-date: 2019-02-11 11:20:25
-image: '/assets/img/'
-description:
-main-class:
-color:
-tags:
-categories:
-twitter_text:
-introduction:
+title: Desenvolvimento de um bot para o Telegram em Python, do zero ao deploy - Parte 1
+author: Douglas Gusson 
+tags: [Telegram, Bot, Python]
 ---
+
 
 ## Introdução
 
